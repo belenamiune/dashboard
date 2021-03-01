@@ -123,9 +123,9 @@
               :class="{ 'float-left': isRTL }"
             >
               <i slot="title" class="tim-icons icon-settings-gear-63"></i>
-              <a class="dropdown-item" href="#pablo"> عمل </a>
-              <a class="dropdown-item" href="#pablo"> عمل آخر </a>
-              <a class="dropdown-item" href="#pablo"> شيء آخر </a>
+              <a class="dropdown-item" href="/"> عمل </a>
+              <a class="dropdown-item" href="/"> عمل آخر </a>
+              <a class="dropdown-item" href="/"> شيء آخر </a>
             </base-dropdown>
           </template>
           <div class="table-full-width table-responsive">

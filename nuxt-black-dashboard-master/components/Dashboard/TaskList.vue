@@ -8,7 +8,7 @@
       </td>
       <td class="td-actions text-right">
         <el-tooltip
-          content="Edit task"
+          content="Editar tarea"
           effect="light"
           :open-delay="300"
           placement="top"
@@ -32,38 +32,33 @@ export default {
     return {
       tableData: [
         {
-          title: 'Update the Documentation',
-          description: 'Dwuamish Head, Seattle, WA 8:47 AM',
+          title: 'Confirmar reservas',
+          description: '5 Reservas pendientes de confirmación',
           done: false
         },
         {
-          title: 'GDPR Compliance',
+          title: 'Realizar pedido semanal',
           description:
-            'The GDPR is a regulation that requires businesses to protect the personal data and privacy of Europe citizens for transactions that occur within EU member states.',
+            'Última posibilidad de carga dentro de 6 días.',
           done: true
         },
         {
-          title: 'Solve the issues',
+          title: 'Revisar estado de heladeras',
           description:
-            'Fifty percent of all respondents said they would be more likely to shop at a company',
+            'Heladera número 02 posible falla de motor',
           done: false
         },
         {
-          title: 'Release v2.0.0',
-          description: 'Ra Ave SW, Seattle, WA 98116, SUA 11:19 AM',
+          title: 'Reunión Marketing',
+          description: '10/04/2021 reunión genercial para definir estrategias de marketing',
           done: false
         },
         {
-          title: 'Export the processed files',
+          title: 'Entrevistar a 5 candidatos',
           description:
-            'The report also shows that consumers will not easily forgive a company once a breach exposing their personal data occurs.',
+            '12/04/2021 9:00 hs entrevista candidatos. Puesto: mesero/mesera',
           done: false
         },
-        {
-          title: 'Arival at export process',
-          description: 'Capitol Hill, Seattle, WA 12:34 AM',
-          done: false
-        }
       ]
     };
   }

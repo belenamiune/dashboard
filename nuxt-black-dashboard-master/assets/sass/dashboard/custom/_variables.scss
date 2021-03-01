@@ -50,7 +50,7 @@ $pink:    #f3a4b5 !default;
 $red:     #f5365c !default;
 $orange:  #fb6340 !default;
 $yellow:  #ffd600 !default;
-$green:   #2dce89 !default;
+$green:   #184042 !default;
 $teal:    #11cdef !default;
 $cyan:    #2bffc6 !default;
 
@@ -118,8 +118,8 @@ $danger-states:        #ec250d !default;
 $black-states:         #1d253b !default;
 $vue-states:           #389466 !default;
 
-$background-black:           #1e1e2f !default;
-$background-states-black:    #1e1e24 !default;
+$background-black:           $opacity-gray-8 !default;
+$background-states-black:    $opacity-gray-8 !default;
 
 // opacity
 $default-opacity:      rgba(182, 182, 182, .6) !default;
@@ -142,7 +142,7 @@ $active-blue:                #00bbff !default;
 
 $light:         $gray-500 !default;
 $dark:          $gray-900 !default;
-$darker:        darken($gray-900, 15%) !default;
+$darker:        $white !default;
 
 $facebook:              #3b5998 !default;
 $facebook-states:       darken($facebook, 5%) !default;

@@ -1,13 +1,78 @@
 <template>
   <div class="row">
+    <!--Cajas chicas -->
+    <div class="col-lg-4" :class="{ 'text-right': isRTL }">
+      <card type="chart">
+        <template slot="header">
+          <h2 class="card-category" style="color: white; font-size: 18px">Usuarios</h2>
+           <h6 class="card-category custom-transform-class text-none">Total de usuarios registrados en la aplicación web</h6>
+          <h3 class="card-title">
+            <i class="tim-icons icon-single-02 "></i> 960
+          </h3>
+        </template>
+        <div class="chart-area">
+          <line-chart
+            style="height: 100%"
+            :chart-data="purpleLineChart.chartData"
+            :gradient-colors="purpleLineChart.gradientColors"
+            :gradient-stops="purpleLineChart.gradientStops"
+            :extra-options="purpleLineChart.extraOptions"
+          >
+          </line-chart>
+        </div>
+      </card>
+    </div>
+    <div class="col-lg-4" :class="{ 'text-right': isRTL }">
+      <card type="chart">
+        <template slot="header">
+        <h2 class="card-category" style="color: white; font-size: 18px">Pedidos</h2>
+           <h6 class="card-category">Total de pedidos concretados</h6>
+            <h3 class="card-title">
+            <i class="tim-icons icon-cart text-info "></i> 25/30
+          </h3>
+        </template>
+        <div class="chart-area">
+          <bar-chart
+            style="height: 100%"
+            :chart-data="blueBarChart.chartData"
+            :gradient-stops="blueBarChart.gradientStops"
+            :extra-options="blueBarChart.extraOptions"
+          >
+          </bar-chart>
+        </div>
+      </card>
+    </div>
+    <div class="col-lg-4" :class="{ 'text-right': isRTL }">
+      <card type="chart">
+        <template slot="header">
+          <h2 class="card-category" style="color: white; font-size: 18px">Reservas</h2>
+           <h6 class="card-category">Total de reservas actuales</h6>
+            <h3 class="card-title">
+            <i class="tim-icons icon-calendar-60 text-success "></i> 17
+          </h3>
+        </template>
+        <div class="chart-area">
+          <line-chart
+            style="height: 100%"
+            :chart-data="greenLineChart.chartData"
+            :gradient-stops="greenLineChart.gradientStops"
+            :extra-options="greenLineChart.extraOptions"
+          >
+          </line-chart>
+        </div>
+      </card>
+    </div>
     <!-- Big Chart -->
     <div class="col-12">
       <card type="chart">
+        
         <template slot="header">
           <div class="row">
             <div class="col-sm-6" :class="isRTL ? 'text-right' : 'text-left'">
-              <h5 class="card-category">Total shipments</h5>
-              <h2 class="card-title">Performance</h2>
+            <h2 class="card-category" style="color: white; font-size: 18px">Cantidad de ventas</h2>
+                <h3 class="card-title">
+            <i class="tim-icons icon-chart-bar-32 text-success "></i> 8005
+          </h3>
             </div>
             <div class="col-sm-6 d-flex d-sm-block">
               <div
@@ -53,70 +118,12 @@
     </div>
 
 
-    <!-- Small charts -->
-    <div class="col-lg-4" :class="{ 'text-right': isRTL }">
-      <card type="chart">
-        <template slot="header">
-          <h5 class="card-category">Total Shipments</h5>
-          <h3 class="card-title">
-            <i class="tim-icons icon-bell-55 text-primary "></i> 763,215
-          </h3>
-        </template>
-        <div class="chart-area">
-          <line-chart
-            style="height: 100%"
-            :chart-data="purpleLineChart.chartData"
-            :gradient-colors="purpleLineChart.gradientColors"
-            :gradient-stops="purpleLineChart.gradientStops"
-            :extra-options="purpleLineChart.extraOptions"
-          >
-          </line-chart>
-        </div>
-      </card>
-    </div>
-    <div class="col-lg-4" :class="{ 'text-right': isRTL }">
-      <card type="chart">
-        <template slot="header">
-          <h5 class="card-category">Daily Sales</h5>
-          <h3 class="card-title">
-            <i class="tim-icons icon-delivery-fast text-info "></i> 3,500€
-          </h3>
-        </template>
-        <div class="chart-area">
-          <bar-chart
-            style="height: 100%"
-            :chart-data="blueBarChart.chartData"
-            :gradient-stops="blueBarChart.gradientStops"
-            :extra-options="blueBarChart.extraOptions"
-          >
-          </bar-chart>
-        </div>
-      </card>
-    </div>
-    <div class="col-lg-4" :class="{ 'text-right': isRTL }">
-      <card type="chart">
-        <template slot="header">
-          <h5 class="card-category">Completed tasks</h5>
-          <h3 class="card-title">
-            <i class="tim-icons icon-send text-success "></i> 12,100K
-          </h3>
-        </template>
-        <div class="chart-area">
-          <line-chart
-            style="height: 100%"
-            :chart-data="greenLineChart.chartData"
-            :gradient-stops="greenLineChart.gradientStops"
-            :extra-options="greenLineChart.extraOptions"
-          >
-          </line-chart>
-        </div>
-      </card>
-    </div>
+    
     <div class="col-lg-5">
       <card type="tasks" :header-classes="{ 'text-right': isRTL }">
         <template slot="header" class="d-inline">
-          <h6 class="title d-inline">Tasks (5)</h6>
-          <p class="card-category d-inline">Today</p>
+          <h2 class="card-category" style="color: white; font-size: 18px">Tareas pendientes (5)</h2>
+          <p class="card-category d-inline">Abril 09/2021</p>
 
           <base-dropdown
             menu-on-right=""
@@ -125,9 +132,8 @@
             class="float-right"
           >
             <i slot="title" class="tim-icons icon-settings-gear-63"></i>
-            <a class="dropdown-item" href="#pablo"> Action </a>
-            <a class="dropdown-item" href="#pablo"> Another action </a>
-            <a class="dropdown-item" href="#pablo"> Something else </a>
+            <a class="dropdown-item" href="/"> Eliminar panel </a>
+            <a class="dropdown-item" href="/"> Editar </a>
           </base-dropdown>
         </template>
         <div class="table-full-width table-responsive">
@@ -137,32 +143,21 @@
     </div>
     <div class="col-lg-7">
       <card card-body-classes="table-full-width">
-        <h4 slot="header" class="card-title">Striped table</h4>
+        <h4 slot="header" class="card-title">Promociones actuales</h4>
         <el-table :data="tableData">
           <el-table-column
             min-width="150"
             sortable
-            label="Name"
+            label="Producto"
             property="name"
           ></el-table-column>
-          <el-table-column
-            min-width="150"
-            sortable
-            label="Country"
-            property="country"
-          ></el-table-column>
-          <el-table-column
-            min-width="150"
-            sortable
-            label="City"
-            property="city"
-          ></el-table-column>
+         
           <el-table-column
             min-width="150"
             sortable
             align="right"
             header-align="right"
-            label="Salary"
+            label="Precio"
             property="salary"
           ></el-table-column>
         </el-table>
@@ -183,7 +178,7 @@ let bigChartData = [
   [80, 120, 105, 110, 95, 105, 90, 100, 80, 95, 70, 120],
   [60, 80, 65, 130, 80, 105, 90, 130, 70, 115, 60, 130]
 ]
-let bigChartLabels = ['JAN', 'FEB', 'MAR', 'APR', 'MAY', 'JUN', 'JUL', 'AUG', 'SEP', 'OCT', 'NOV', 'DEC']
+let bigChartLabels = ['ENE', 'FEB', 'MAR', 'ABR', 'MAY', 'JUN', 'JUL', 'AGOSTO', 'SEP', 'OCT', 'NOV', 'DEC']
 let bigChartDatasetOptions = {
   fill: true,
   borderColor: config.colors.primary,
@@ -213,38 +208,33 @@ export default {
       tableData: [
         {
           id: 1,
-          name: 'Dakota Rice',
-          salary: '$36.738',
-          country: 'Niger',
-          city: 'Oud-Turnhout'
+          name: 'Dos meriendas + 1 Café',
+          salary: '$120',
+          
         },
         {
           id: 2,
-          name: 'Minerva Hooper',
-          salary: '$23,789',
-          country: 'Curaçao',
-          city: 'Sinaai-Waas'
+          name: 'Café americano',
+          salary: '$150',
+         
         },
         {
           id: 3,
-          name: 'Sage Rodriguez',
-          salary: '$56,142',
-          country: 'Netherlands',
-          city: 'Baileux'
+          name: '2 Submarinos + 1 tostado',
+          salary: '$180',
+         
         },
         {
           id: 4,
-          name: 'Philip Chaney',
-          salary: '$38,735',
-          country: 'Korea, South',
-          city: 'Overland Park'
+          name: 'Merienda veggie',
+          salary: '$230',
+          
         },
         {
           id: 5,
-          name: 'Doris Greene',
-          salary: '$63,542',
-          country: 'Malawi',
-          city: 'Feldkirchen in Kärnten'
+          name: 'Desayuno continental',
+          salary: '$270',
+         
         }
       ],
       bigLineChart: {
@@ -264,10 +254,10 @@ export default {
       purpleLineChart: {
         extraOptions: chartConfigs.purpleChartOptions,
         chartData: {
-          labels: ['JUL', 'AUG', 'SEP', 'OCT', 'NOV', 'DEC'],
+          labels: ['ENE', 'FEB', 'MAR', 'ABR', 'MAY', 'JUN'],
           datasets: [
             {
-              label: 'Data',
+              label: 'Total',
               fill: true,
               borderColor: config.colors.primary,
               borderWidth: 2,
@@ -290,10 +280,10 @@ export default {
       greenLineChart: {
         extraOptions: chartConfigs.greenChartOptions,
         chartData: {
-          labels: ['JUL', 'AUG', 'SEP', 'OCT', 'NOV'],
+          labels: ['ENE', 'FEB', 'MAR', 'ABR', 'MAY', 'JUN'],
           datasets: [
             {
-              label: 'My First dataset',
+              label: 'Total',
               fill: true,
               borderColor: config.colors.danger,
               borderWidth: 2,
@@ -320,10 +310,10 @@ export default {
       blueBarChart: {
         extraOptions: chartConfigs.barChartOptions,
         chartData: {
-          labels: ['USA', 'GER', 'AUS', 'UK', 'RO', 'BR'],
+          labels: ['ENE', 'FEB', 'MAR', 'ABR', 'MAY', 'JUN'],
           datasets: [
             {
-              label: 'Countries',
+              label: 'Total',
               fill: true,
               borderColor: config.colors.info,
               borderWidth: 2,
@@ -346,10 +336,10 @@ export default {
       return this.$rtl.isRTL;
     },
     bigLineChartCategories () {
-      return [{ name: 'Accounts', icon: 'tim-icons icon-single-02' }, {
-        name: 'Purchases',
+      return [{ name: '2019', icon: 'tim-icons icon-single-02' }, {
+        name: '2020',
         icon: 'tim-icons icon-gift-2'
-      }, { name: 'Sessions', icon: 'tim-icons icon-tap-02' }];
+      }, { name: '2021', icon: 'tim-icons icon-tap-02' }];
     }
   },
   methods: {

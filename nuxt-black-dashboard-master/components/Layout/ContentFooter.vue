@@ -1,7 +1,7 @@
 <template>
   <footer class="footer">
     <div class="container-fluid">
-      <div class="copyright">
+      <div class="copyright" style="color: black">
         &copy; {{ year }} Derechos reservados
       </div>
     </div>
