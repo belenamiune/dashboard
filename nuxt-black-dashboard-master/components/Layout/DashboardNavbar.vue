@@ -44,7 +44,7 @@
           type="text"
           class="form-control"
           id="inlineFormInputGroup"
-          placeholder="SEARCH"
+          placeholder="Buscars"
         />
       </modal>
       <base-dropdown
@@ -58,28 +58,19 @@
           slot="title"
         >
           <div class="notification d-none d-lg-block d-xl-block"></div>
-          <i class="tim-icons icon-sound-wave"></i>
-          <p class="d-lg-none">New Notifications</p>
+          <i class="tim-icons icon-bell-55"></i>
+          <p class="d-lg-none">Nuevas notificaciones</p>
         </template>
         <li class="nav-link">
-          <a href="#" class="nav-item dropdown-item"
-            >Mike John responded to your email</a
+          <a href="/reservas" class="nav-item dropdown-item"
+            >Tres confirmaciones de reservas pendientes</a
           >
         </li>
         <li class="nav-link">
-          <a href="#" class="nav-item dropdown-item">You have 5 more tasks</a>
+          <a href="/usuarios" class="nav-item dropdown-item">Cinco nuevos usuarios se registraron</a>
         </li>
-        <li class="nav-link">
-          <a href="#" class="nav-item dropdown-item"
-            >Your friend Michael is in town</a
-          >
-        </li>
-        <li class="nav-link">
-          <a href="#" class="nav-item dropdown-item">Another notification</a>
-        </li>
-        <li class="nav-link">
-          <a href="#" class="nav-item dropdown-item">Another one</a>
-        </li>
+        
+   
       </base-dropdown>
       <base-dropdown
         tag="li"
@@ -92,19 +83,19 @@
         <template
           slot="title"
         >
-          <div class="photo"><img src="img/mike.jpg" /></div>
+          <div class="photo"><img src="img/emilyz.jpg" /></div>
           <b class="caret d-none d-lg-block d-xl-block"></b>
           <p class="d-lg-none">Log out</p>
         </template>
         <li class="nav-link">
-          <a href="#" class="nav-item dropdown-item">Profile</a>
+          <a href="user" class="nav-item dropdown-item">Cuenta</a>
         </li>
         <li class="nav-link">
-          <a href="#" class="nav-item dropdown-item">Settings</a>
+          <a href="#" class="nav-item dropdown-item">Configuración</a>
         </li>
         <div class="dropdown-divider"></div>
         <li class="nav-link">
-          <a href="#" class="nav-item dropdown-item">Log out</a>
+          <a href="#" class="nav-item dropdown-item">Cerrar sesión</a>
         </li>
       </base-dropdown>
     </ul>

@@ -29,7 +29,7 @@ export default {
   props: {
     title: {
       type: String,
-      default: 'Creative Tim',
+      default: 'Coffea Dashboard',
       description: 'Sidebar title'
     },
     shortTitle: {
@@ -39,7 +39,7 @@ export default {
     },
     logo: {
       type: String,
-      default: 'http://demos.creative-tim.com/nuxt-black-dashboard-pro/img/icon-nuxt.svg',
+      default: 'img/logo.png',
       description: 'Sidebar app logo'
     },
     backgroundColor: {

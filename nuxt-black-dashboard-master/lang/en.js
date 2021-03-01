@@ -1,6 +1,6 @@
 module.exports = {
   "sidebar": {
-    "title": "Creative Tim",
+    "title": "Coffea Dashboard",
     "shortTitle": "CT",
     "dashboard": "Dashboard",
     "pages": "Pages",
@@ -36,6 +36,12 @@ module.exports = {
     "vectorMaps": "Vector Maps",
     "widgets": "Widgets",
     "charts": "Charts",
-    "calendar": "Calendar"
+    "calendar": "Calendar",
+    "usuarios": "Usuarios",
+    "reservas": "Reservas",
+    "productos": "Productos",
+    "pedidos": "Pedidos",
+    "acercaDe": "Acerca De",
+    "sucursales": "Sucursales"
   }
 }

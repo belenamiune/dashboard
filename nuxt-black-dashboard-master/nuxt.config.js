@@ -1,32 +1,16 @@
-/*!
 
- =========================================================
- * Nuxt Black Dashboard - v1.0.0
- =========================================================
-
- * Product Page: https://www.creative-tim.com/product/nuxt-black-dashboard
- * Copyright 2020 Creative Tim (https://www.creative-tim.com)
-
- * Coded by Creative Tim
-
- =========================================================
-
- * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
- */
 export default {
   mode: 'universal',
-  /*
-  ** Headers of the page
-  */
+ 
   head: {
-    title: 'Nuxt Black Dashboard',
+    title: 'Coffea Dashboard',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { hid: 'description', name: 'description', content: process.env.npm_package_description || '' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.png' },
+      { rel: 'icon', type: 'img/logo.png', href: 'img/logo.png' },
       { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Poppins:200,300,400,600,700,800'},
       { rel: 'stylesheet', href: 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css'}
     ],

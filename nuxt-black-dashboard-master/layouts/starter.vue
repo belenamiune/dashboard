@@ -3,10 +3,10 @@
     <notifications></notifications>
     <side-bar
       :background-color="sidebarBackground"
-      short-title="CT"
-      title="Creative Tim"
+      short-title="CD"
+      title="Coffea Dashboard"
     >
-      <template slot-scope="props" slot="links">
+      <template slot="links">
         <sidebar-item
           :link="{
             name: $t('sidebar.dashboard'),
