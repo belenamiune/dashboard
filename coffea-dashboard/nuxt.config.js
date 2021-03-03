@@ -63,6 +63,7 @@ export default {
           accent: '#112D2E', //marrón
           info: '#FDF7F7', //blanco
           boton: '#EFEFEF',
+          red: '#FFFFFF',
           warning: colors.amber.base,
           error: colors.deepOrange.accent4,
           success: colors.green.accent3,

@@ -82,7 +82,8 @@
                                               <v-btn  class="font-weight-semibold boton pa-4 custom-transform-class text-none"  elevation="6" rounded @click="dialog=false"> 
                                                   Cancelar
                                               </v-btn>
-                                              <v-btn class="font-weight-semibold primary pa-4 custom-transform-class text-none" elevation="6" rounded @click="dialog=false" to="/login"> 
+                                              <v-btn class="font-weight-semibold red pa-4 custom-transform-class text-none text--white" elevation="6" 
+                                              rounded @click="dialog=false" style="color: white" to="/login"> 
                                                   Cerrar sesión
                                               </v-btn>
 
@@ -109,7 +110,7 @@
                   @click.stop="drawer = !drawer" 
                   color="white"
                 />
-                 <h3 style="color: white; font-weight:400"> COFFEA - SUCURSAL N°2   CHACABUCO 920 </h3>
+                 <h3 style="color: white; font-weight:400"> COFFEA - SUCURSAL N°2   BLVD. SAN JUAN</h3>
                 <v-spacer></v-spacer>
 
                 <v-btn
@@ -165,12 +166,12 @@
         {
           icon: 'mdi-shopping',
           title: 'Productos',
-          to: '/mi_cuenta'
+          to: '/productos'
         },
         {
           icon: 'mdi-cart-outline',
           title: 'Pedidos',
-          to: '/categorias'
+          to: '/pedidos'
         },
         {
           icon: 'mdi-calendar',
@@ -185,7 +186,7 @@
         {
           icon: 'mdi-store',
           title: 'Sucursales',
-          to: '/sucursales_menu'
+          to: '/sucursales'
         },
          {
           icon: 'mdi-information-outline',
@@ -198,18 +199,6 @@
     
     
   },
-  computed: {
-    resultQuery(){
-      if(this.searchQuery){
-      return this.resources.filter((item)=>{
-        return this.searchQuery.toLowerCase().split(' ').every(v => item.title.toLowerCase().includes(v))
-      })
-      }else{
-        return this.resources;
-      }
-    }
-  },
-    
      watch: {
       overlay (val) {
         val && setTimeout(() => {
@@ -225,13 +214,9 @@
                 
         },
 
-      toCart () {
-                 window.location.href = 'carrito';     
-                
-        },
-    } 
-
   }
+  
+}
 </script>
 
 <style lang="scss" scoped>
@@ -240,148 +225,32 @@
     font-family: 'rawline', sans-serif !important; 
  }
 
- .numeros{
-   font-family: 'Montserrat', sans-serif;
- }
 
-    #app {
-        background-color: red;
-    }
-
-    .v-list-item__title {
+  .v-list-item__title {
         color: #FDF7F7;
     }
 
-    .v-list-item__subtitle {
+  .v-list-item__subtitle {
       color: #FDF7F7 !important;
       font-weight: lighter;
     }
 
-    .v-list-item__content {
-      color: white;
-    }
 
-    .v-card__title {
+  .v-card__title {
       word-break: normal; 
-    }
+  }
 
-    .logout {
+  .logout {
       margin-top: -0.8em;
     }
 
-    .v-badge__badge {
-      inset: calc(80% - 8px) auto auto calc(100% - 4px);
-    }
-
-    span {
+  span {
       font-weight: normal;
       padding-left: 1em !important;
       
     }
 
-    p {
-      margin-bottom: 0 !important;
-      margin-top: 0.5em !important;
-    }
-
-    .theme--light.v-chip:not(.v-chip--active) {
-      height: 40px;
-    }
-
-    .input_busqueda {
-      border: 1px solid lightgray;
-      border-radius: 20em;
-      width: 90%;
-      height: 40px;
-    }
-
-    td {
-      text-align: left;
-      width: 250px;
-      border-radius: 20px;
-      height: 40px;
-      padding-top: 8px;
-      /*border: 1px solid #184042;*/
-    }
-
-    table {
-      border-collapse: separate;
-      border-spacing: 5px;
-    }
-
-    a {
-          text-decoration: none;
-         
-      }
-    tr {
-     width: 230px;
-     border-radius: 8px;
-     background-color: #eeecec;
-     
-   }
-
-   ::placeholder {
-      padding: 1em;
-    }
 
 
-    #dos .v-dialog > .v-card{
-        border-radius: 0px 0px 30px 30px;
-        position: absolute;
-        left:0;
-        top: 0;
-        right: 0;
-        height: 65%;
-    }
 
-     #dos .v-dialog > .v-card > .v-card__title {
-        word-break: normal; 
-        font-size: 20px;
-    }
-
-    #dos .v-card__actions > .v-btn.v-btn{
-        width: 80%;
-        border-radius: 10px;
-        height: 45px;
-    }
-
-   span.v-btn__content {
-     margin-left: -3em !important;
-   }
-
-   span.v-badge.font-weight-bold.v-badge--bottom.v-badge--overlap.theme--light {
-     margin-left: -3em !important
-   }
-
-
-@media screen and (min-width: 320px) {
-    .puntos{
-        border-radius: 20px 10px 10px 20px !important;
-        width: 35%;
-        height: 90%;
-        margin-right: 1px !important;
-    }
-
-}
-
-@media screen and (min-width: 375px){
-
-    .puntos{
-        border-radius: 20px 10px 10px 20px ;
-        width: 30%;
-        height: 90%;
-        margin-right: 1px !important;
-    }
-
-}
-
-@media screen and (min-height: 644px){
-
-  
-  .v-dialog > .v-card{
-        height: 80% !important;
-    }
-
-
-}
 </style>
