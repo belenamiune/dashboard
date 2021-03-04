@@ -63,10 +63,13 @@ export default {
           accent: '#112D2E', //marrón
           info: '#FDF7F7', //blanco
           boton: '#EFEFEF',
-          red: '#FFFFFF',
-          warning: colors.amber.base,
-          error: colors.deepOrange.accent4,
+          red: '#FF0000',
+          warning: '#126367',
+          error: '#63A8AB',
           success: colors.green.accent3,
+          azul1: '#3F696B',
+          azul2: '#294D4F'
+
           
         }
       }

@@ -53,47 +53,6 @@
                   </v-list-item>
                 </v-list>
 
-                <v-list class="logout" exact>
-                  <v-list-item>
-
-                    <v-list-item-action>
-
-                      <v-icon 
-                        color="#FDF7F7"> 
-                        mdi-logout
-                        </v-icon>
-
-                    </v-list-item-action>
-
-                    <v-list-item-content>
-                         <v-list-item-title class="font-weight-semibold" @click="dialog=true, overlay = !overlay">  
-                               Cerrar sesión
-                         </v-list-item-title>
-
-
-                         <v-dialog v-model="dialog" width="500"  transition="dialog-bottom-transition"  persistent>
-                                <v-card >
-                                    
-                                        <v-card-title class="font-weight-regular justify-center align-center text-center pt-0" >
-                                          ¿Estás seguro de cerrar sesión?
-                                        </v-card-title>
-                                
-                                        <v-card-actions class=" justify-center align-center pb-6 pt-0">
-                                              <v-btn  class="font-weight-semibold boton pa-4 custom-transform-class text-none"  elevation="6" rounded @click="dialog=false"> 
-                                                  Cancelar
-                                              </v-btn>
-                                              <v-btn class="font-weight-semibold red pa-4 custom-transform-class text-none text--white" elevation="6" 
-                                              rounded @click="dialog=false" style="color: white" to="/login"> 
-                                                  Cerrar sesión
-                                              </v-btn>
-
-                                        </v-card-actions>
-                                </v-card>
-                           </v-dialog>
-
-                    </v-list-item-content>
-                  </v-list-item>
-                </v-list>
 
             </v-navigation-drawer>
 
@@ -120,21 +79,91 @@
                         id="boton"
                       >
                         <v-icon>mdi-magnify</v-icon>
-                      </v-btn>
+               </v-btn>
 
+                <v-menu offset-y style="background-color: red; border-radius: 15em">
+                     <template v-slot:activator="{ on, attrs }" style="background-color: red; border-radius: 15em">
         
-                     
+                            <v-btn v-bind="attrs" v-on="on" style="box-shadow: none !important; background-color: transparent !important">
                               <v-avatar
                                 left
                                 class="secondary darken-4  "
                                 size="44"
-                                @click="toMyAccount()"
                               >
                               
                               <v-img src="https://randomuser.me/api/portraits/women/28.jpg"></v-img>
 
                               </v-avatar>
-                          
+                              </v-btn>
+                    </template>
+
+                     <v-list style="heigth: 100px !important">
+                           <v-list-item >
+                                  <v-list-item-content>
+                                    <v-list-item-title class="title" style="color: black !important; font-size: 18px !important">
+                                      Depetris Guillermina
+                                    </v-list-item-title>
+          
+                                  </v-list-item-content>
+
+                                  <v-list-item-action>
+                                    <v-icon>mdi-menu-down</v-icon>
+                                  </v-list-item-action>
+                                </v-list-item>
+                            
+                              <v-divider></v-divider>
+                              <v-list-item
+                              :to="accion.to" 
+                                v-for="(accion, index) in acciones"
+                                :key="index"
+                              >
+                            <v-list-item-icon>
+                              <v-icon v-text="accion.icon"></v-icon>
+                            </v-list-item-icon>
+                          <v-list-item-title style="color: black !important;  font-size: 14px !important">{{ accion.title }}</v-list-item-title>
+                        </v-list-item>
+                      </v-list>
+                       <v-list class="logout" exact>
+                  <v-list-item>
+
+                    <v-list-item-action>
+
+                      <v-icon 
+                        style="color: rgba(0, 0, 0, 0.54)"> 
+                        mdi-logout
+                        </v-icon>
+
+                    </v-list-item-action>
+
+                    <v-list-item-content>
+                         <v-list-item-title style="color: black !important;  font-size: 14px !important" @click="dialog=true, overlay = !overlay">  
+                               Cerrar sesión
+                         </v-list-item-title>
+
+                    </v-list-item-content>
+                  </v-list-item>
+                </v-list>
+
+                </v-menu>
+
+                <v-dialog v-model="dialog" width="500"  transition="dialog-bottom-transition"  persistent>
+                    <v-card >
+                        <v-card-title class="font-weight-regular justify-center align-center text-center pt-0 mt-3" >
+                           ¿Estás seguro de cerrar sesión?
+                        </v-card-title>
+                                
+                        <v-card-actions class=" justify-center align-center pb-6 pt-0">
+                          <v-btn  class="font-weight-semibold boton pa-4 custom-transform-class text-none"  elevation="6" rounded @click="dialog=false"> 
+                              Cancelar
+                          </v-btn>
+                        <v-btn class="font-weight-semibold red pa-4 custom-transform-class text-none text--white"  elevation="6" 
+                          rounded @click="dialog=false" style="color: white; background-color: red !important" to="/login"> 
+                           Cerrar sesión
+                        </v-btn>
+
+                        </v-card-actions>
+                    </v-card>
+                </v-dialog>
 
                          
                       
@@ -176,7 +205,7 @@
         {
           icon: 'mdi-calendar',
           title: 'Reservas',
-          to: '/reservas'
+          to: '/calendario'
         },
          {
           icon: 'mdi-account',
@@ -194,6 +223,16 @@
           to: '/infoUsuario'
         },
       ],
+
+      acciones: [
+         {
+          title: 'Acerca de',
+          icon: 'mdi-information-outline',
+          to: 'infoUsuario'
+        },
+
+
+      ]
      
     }
     
@@ -203,18 +242,9 @@
       overlay (val) {
         val && setTimeout(() => {
           this.overlay = false
-        }, 2000)
+        }, 10000)
       },
     },
-
-     methods:{
-    
-      toMyAccount () {
-                 window.location.href = 'mi_cuenta';     
-                
-        },
-
-  }
   
 }
 </script>
