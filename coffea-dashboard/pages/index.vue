@@ -1,5 +1,5 @@
 <template>
-<div id="login" class="hola">
+<div id="login" class="background">
            <header>
             <v-col style="text-align: center">
                <img src="../static/logo-circulo.svg" max-width="100px !important" max-height="100px !important"> 
@@ -54,7 +54,8 @@
 </script>
 
 <style lang="scss" scoped>
-.hola {
+
+.background {
     background-size: cover;
    background-image: url('../static/background.png');
    height: 100%;
