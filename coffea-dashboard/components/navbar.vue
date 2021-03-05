@@ -113,14 +113,13 @@
                             
                               <v-divider></v-divider>
                               <v-list-item
-                              :to="accion.to" 
                                 v-for="(accion, index) in acciones"
                                 :key="index"
                               >
                             <v-list-item-icon>
                               <v-icon v-text="accion.icon"></v-icon>
                             </v-list-item-icon>
-                          <v-list-item-title style="color: black !important;  font-size: 14px !important">{{ accion.title }}</v-list-item-title>
+                          <v-list-item-title @click="dialog3= true, overlay = !overlay" style="color: black !important;  font-size: 14px !important">{{ accion.title }}</v-list-item-title>
                         </v-list-item>
                       </v-list>
                        <v-list class="logout" exact>
@@ -148,21 +147,72 @@
 
                 <v-dialog v-model="dialog" width="500"  transition="dialog-bottom-transition"  persistent>
                     <v-card >
-                        <v-card-title class="font-weight-regular justify-center align-center text-center pt-0 mt-3" >
+                        <v-card-title class="font-weight-regular justify-center align-center text-center pt-0 mt-3  " >
                            ¿Estás seguro de cerrar sesión?
                         </v-card-title>
                                 
-                        <v-card-actions class=" justify-center align-center pb-6 pt-0">
+                        <v-card-actions class=" justify-center align-center pb-6 pt-0 mt-3">
                           <v-btn  class="font-weight-semibold boton pa-4 custom-transform-class text-none"  elevation="6" rounded @click="dialog=false"> 
                               Cancelar
                           </v-btn>
                         <v-btn class="font-weight-semibold red pa-4 custom-transform-class text-none text--white"  elevation="6" 
-                          rounded @click="dialog=false" style="color: white; background-color: red !important" to="/login"> 
+                          rounded @click="dialog=false" style="color: white; background-color: red !important" to="/"> 
                            Cerrar sesión
                         </v-btn>
 
                         </v-card-actions>
                     </v-card>
+                </v-dialog>
+
+                  <v-dialog v-model="dialog3" width="500"  transition="dialog-bottom-transition"  persistent>
+                   <v-card class="mx-auto" width="600" tile >
+                     
+                      <v-list>
+                        <v-list-item>
+                          <v-list-item-avatar>
+                            <v-img src="https://randomuser.me/api/portraits/women/28.jpg"></v-img>
+                          </v-list-item-avatar>
+                          <v-list-title class="title"> Mi cuenta </v-list-title>
+                          <v-btn
+                                    icon
+                                    dark
+                                    color="secondary"
+                                    style="margin-left: 19em; margin-top: -2.7em"
+                                     @click="dialog3=false"
+                                >
+                                
+                                    <v-icon>mdi-close</v-icon>
+                                </v-btn>
+
+                        </v-list-item>
+
+                        <v-list-item link>
+                          <v-list-item-content>
+                            <v-list-item-title class="title" style="color: #F8744E">
+                              Guillermina Depetris
+                            </v-list-item-title>
+                            <v-list-item-subtitle  style="color: black !important; font-weight: 400">depetrisguillermina@gmail.com</v-list-item-subtitle>
+                          </v-list-item-content>
+
+                          <v-list-item-action>
+                            <v-icon>mdi-menu-down</v-icon>
+                          </v-list-item-action>
+                        </v-list-item>
+                      </v-list>
+                      <v-divider></v-divider>
+                      <v-list >
+                        <v-list-item>
+                        <v-list-item-title style="color: black !important; font-weight: 400; font-size: 20px !important" ><v-icon color="#F8744E">mdi-store </v-icon> Sucursal a cargo: <strong style="font-size: 16px; font-weight: 400"> N°2 </strong></v-list-item-title>
+                        </v-list-item>
+                        <v-list-item>
+                        <v-list-item-title style="color: black !important;  font-weight: 400; font-size: 20px !important"><v-icon color="#F8744E">mdi-pin </v-icon> Dirección de la sucursal:<strong style="font-size: 16px; font-weight: 400"> Boulevard San Juan 798 </strong> </v-list-item-title>
+                        </v-list-item>
+                        <v-list-item>
+                        <v-list-item-title style="color: black !important;  font-weight: 400; font-size: 20px !important"><v-icon color="#F8744E">mdi-phone </v-icon> Teléfono:  <strong style="font-size: 16px; font-weight: 400">  0351-4578983 </strong> </v-list-item-title> 
+                      </v-list-item>
+                      </v-list>
+                   
+                  </v-card>
                 </v-dialog>
 
                          
@@ -186,6 +236,8 @@
       dialog: false,
       overlay: false,
       dialog2: false,
+      dialog3: false,
+      selectedItem: 0,
       items: [
         {
           icon: 'mdi-chart-pie',
@@ -217,11 +269,7 @@
           title: 'Sucursales',
           to: '/sucursales'
         },
-         {
-          icon: 'mdi-information-outline',
-          title: 'Acerca de',
-          to: '/infoUsuario'
-        },
+    
       ],
 
       acciones: [
@@ -229,6 +277,22 @@
           title: 'Acerca de',
           icon: 'mdi-information-outline',
           to: 'infoUsuario'
+        },
+
+
+      ],
+
+       sucursales: [
+         {
+          numero:'Sucursal a cargo: N°2',
+          icon:'mdi-information-outline',
+        
+        },
+
+        {
+          telefono:'0351-4578983',
+         telefono_icon: 'mdi-phone',
+        
         },
 
 
