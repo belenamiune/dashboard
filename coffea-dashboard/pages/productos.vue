@@ -6,46 +6,46 @@
       <v-col>
       </v-col>
       <v-row style="width: 100% !important; margin-top: 1em; margin-bottom: 2em">
-        <v-col class="mt-8" cols="1" style="max-width: 150px">
+        <v-col class="mt-8" cols="1" style="max-width: 150px" @click="toProductos()">
         <v-img :src="require(`../static/categorias.png`)">
         </v-img>
      </v-col>
-     <v-col class="mt-8" cols="1"  style="max-width: 150px">
+     <v-col class="mt-8" cols="1"  style="max-width: 150px" @click="toCafe()">
         <v-img :src="require(`../static/cafe.png`)">
         </v-img>
      </v-col>
-     <v-col class="mt-8" cols="1"  style="max-width: 150px">
+     <v-col class="mt-8" cols="1"  style="max-width: 150px" @click="toTortas()">
         <v-img :src="require(`../static/tortas.png`)">
         </v-img>
      </v-col>
-     <v-col class="mt-8" cols="1"  style="max-width: 150px">
+     <v-col class="mt-8" cols="1"  style="max-width: 150px" @click="toSandwiches()">
         <v-img :src="require(`../static/sandwiches.png`)">
         </v-img>
      </v-col>
 
-     <v-col class="mt-8" cols="1"  style="max-width: 150px">
+     <v-col class="mt-8" cols="1"  style="max-width: 150px" @click="toPromociones()">
         <v-img :src="require(`../static/promociones.png`)">
         </v-img>
      </v-col>
-     <v-col class="mt-8" cols="1"  style="max-width: 150px">
+     <v-col class="mt-8" cols="1"  style="max-width: 150px" @click="toProductos()">
         <v-img :src="require(`../static/jugos.png`)">
         </v-img>
      </v-col>
-       <v-col class="mt-8" cols="1"  style="max-width: 150px">
+       <v-col class="mt-8" cols="1"  style="max-width: 150px" @click="toProductos()">
         <v-img :src="require(`../static/ensaladas.png`)">
         </v-img>
      </v-col>
-      <v-col class="mt-8" cols="1"  style="max-width: 150px">
+      <v-col class="mt-8" cols="1"  style="max-width: 150px" @click="toProductos()">
         <v-img :src="require(`../static/waffles.png`)">
         </v-img>
      </v-col>
 
-     <v-col class="mt-8" cols="1"  style="max-width: 150px">
+     <v-col class="mt-8" cols="1"  style="max-width: 150px" @click="toProductos()">
         <v-img :src="require(`../static/muffins.png`)">
         </v-img>
      </v-col>
 
-     <v-col class="mt-8" cols="1"  style="max-width: 150px">
+     <v-col class="mt-8" cols="1"  style="max-width: 150px" @click="toProductos()">
         <v-img :src="require(`../static/especialidades.png`)">
         </v-img>
      </v-col>
@@ -338,6 +338,33 @@
         ],
       }
     },
+     methods:{
+    
+      toProductos () {
+                 window.location.href = 'productos';     
+                
+        },
+
+      toCafe () {
+                 window.location.href = 'cafe';     
+                
+        },
+
+     toTortas () {
+                 window.location.href = 'tortas';     
+                
+        },
+
+    toSandwiches () {
+                 window.location.href = 'sandwiches';     
+                
+        },
+    
+    toPromociones () {
+                 window.location.href = 'promociones';     
+                
+        },
+    } 
   }
 </script>
 
