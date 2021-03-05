@@ -34,7 +34,7 @@
             sortable: false,
             value: 'name',
           },
-          { text: 'Encargado', value: 'encargado', icon: 'mdi-cart-outline' },
+          { text: 'Encargado', value: 'encargado'},
           { text: 'Dirección', value: 'direccion' },
           { text: 'Teléfono', value: 'telefono' },
           { text: 'Horario', value: 'horario' }
