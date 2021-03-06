@@ -72,15 +72,14 @@
                  <h3 style="color: white; font-weight:400"> COFFEA - SUCURSAL N°2   BLVD. SAN JUAN</h3>
                 <v-spacer></v-spacer>
 
-                <v-btn
-                        icon
-                        color="white"
-                        @click="dialog2 = true"
-                        id="boton"
-                      >
-                        <v-icon>mdi-magnify</v-icon>
-               </v-btn>
-
+                    <div class="growing-search">
+                    <div class="input">
+                      <input type="text" name="search" placeholder="Escribe lo que quieres buscar"/>
+                      <button type="submit" name="go_search">
+                        <v-icon>mdi-magnify </v-icon>
+                      </button>
+                    </div>
+                  </div>
                 <v-menu offset-y style="background-color: red; border-radius: 15em">
                      <template v-slot:activator="{ on, attrs }" style="background-color: red; border-radius: 15em">
         
@@ -344,6 +343,58 @@
       
     }
 
+.growing-search {
+  padding: 5px 5px 5px 7px;
+  border-radius: 5px;
+  
+ 
+}
+
+.growing-search div {
+  display: inline-block;
+  font-size: 12px;
+}
+
+.growing-search .input input {
+  margin-right: 0;
+  border: none;
+  font-size: inherit;
+  transition: width 200ms;
+  padding-top: 5px;
+  padding-left: 5px;
+  padding-bottom: 5px;
+  width: 0px;
+  color: white;
+  border-bottom: 1px solid #eee;
+}
+
+.growing-search .input input:focus {
+  width: 300px;
+}
+
+.growing-search .submit button {
+  margin-left: 0;
+  border: none;
+  font-size: 1.15em;
+  color: white !important;
+  background-color: transparent;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  transition: color 200ms;
+}
+
+.growing-search .input input:hover, .growing-search .submit button:hover {
+  cursor: pointer;
+}
+
+.growing-search .input input:focus, .growing-search .submit button:focus {
+  outline: none;
+}
+
+
+::placeholder {
+  color: white
+}
 
 
 

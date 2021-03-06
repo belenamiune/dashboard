@@ -44,9 +44,10 @@ export default {
     '@nuxtjs/vuetify',
   ],
 
+ plugins: [ '~/plugins/firebase.js' ],
+
   // Modules (https://go.nuxtjs.dev/config-modules)
-  modules: [
-  ],
+  modules: [],
 
   // Vuetify module configuration (https://go.nuxtjs.dev/config-vuetify)
   buildModules: ['@nuxtjs/vuetify'],
