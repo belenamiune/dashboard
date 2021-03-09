@@ -5,7 +5,7 @@
   <v-row>
       <v-col>
       </v-col>
-      <v-row style="width: 100% !important; margin-top: 1em; margin-bottom: 2em">
+      <v-row style="width: 100% !important; margin-top: 1em; margin-bottom: 2em;">
         <v-col class="mt-8" cols="1" style="max-width: 150px" @click="toProductos()">
         <v-img :src="require(`../static/categorias.png`)">
         </v-img>
@@ -54,7 +54,7 @@
   <v-row>
       <v-col cols="8">
       </v-col>
-      <v-col>
+      <v-col style="margin-right: 1em !important; margin-left: 1em !important">
    <v-text-field
         v-model="search"
         append-icon="mdi-magnify"
@@ -64,7 +64,7 @@
       ></v-text-field>
       </v-col>
   </v-row>
- <v-card class="mt-5">
+ <v-card class="mt-5" style="margin-right: 1em !important; margin-left: 1em !important">
     <v-card-title>
       Café
       <v-spacer></v-spacer>

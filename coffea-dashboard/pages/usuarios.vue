@@ -1,7 +1,7 @@
 <template>
 <v-container fluid>
   <navbar />
- <v-card class="mt-5">
+ <v-card class="mt-5" style="margin-right: 3em !important; margin-left: 3em !important">
     <v-card-title>
       Usuarios
       <v-spacer></v-spacer>

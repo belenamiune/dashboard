@@ -51,7 +51,7 @@
      </v-col>
  </v-row>
   </v-row>
- <v-card class="mt-5">
+ <v-card class="mt-5" style="margin-right: 1em !important; margin-left: 1em !important">
     <v-card-title>
       Café
       <v-spacer></v-spacer>

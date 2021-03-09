@@ -76,7 +76,7 @@
                     <div class="input">
                       <input type="text" name="search" placeholder="Escribe lo que quieres buscar"/>
                       <button type="submit" name="go_search">
-                        <v-icon>mdi-magnify </v-icon>
+                        <v-icon color="white">mdi-magnify </v-icon>
                       </button>
                     </div>
                   </div>
@@ -163,12 +163,12 @@
                     </v-card>
                 </v-dialog>
 
-                  <v-dialog v-model="dialog3" width="500"  transition="dialog-bottom-transition"  persistent>
-                   <v-card class="mx-auto" width="600" tile >
-                     
+                  <v-dialog v-model="dialog3" width="550"  transition="dialog-bottom-transition"  persistent>
+                   <v-card class="mx-auto" width="600" >
+                  
                       <v-list>
-                        <v-list-item>
-                          <v-list-item-avatar>
+                        <v-list-item >
+                          <v-list-item-avatar style=" margin-left: 2em">
                             <v-img src="https://randomuser.me/api/portraits/women/28.jpg"></v-img>
                           </v-list-item-avatar>
                           <v-list-title class="title"> Mi cuenta </v-list-title>
@@ -176,7 +176,7 @@
                                     icon
                                     dark
                                     color="secondary"
-                                    style="margin-left: 19em; margin-top: -2.7em"
+                                    style="margin-left: 21em; margin-top: -1em"
                                      @click="dialog3=false"
                                 >
                                 
@@ -186,31 +186,29 @@
                         </v-list-item>
 
                         <v-list-item link>
-                          <v-list-item-content>
+                          <v-list-item-content style=" margin-left: 2em">
                             <v-list-item-title class="title" style="color: #F8744E">
                               Guillermina Depetris
                             </v-list-item-title>
                             <v-list-item-subtitle  style="color: black !important; font-weight: 400">depetrisguillermina@gmail.com</v-list-item-subtitle>
                           </v-list-item-content>
 
-                          <v-list-item-action>
-                            <v-icon>mdi-menu-down</v-icon>
-                          </v-list-item-action>
+                         
                         </v-list-item>
                       </v-list>
-                      <v-divider></v-divider>
+                      <v-divider style="max-width: 75% !important; margin-left: 3em !important"></v-divider>
                       <v-list >
-                        <v-list-item>
-                        <v-list-item-title style="color: black !important; font-weight: 400; font-size: 20px !important" ><v-icon color="#F8744E">mdi-store </v-icon> Sucursal a cargo: <strong style="font-size: 16px; font-weight: 400"> N°2 </strong></v-list-item-title>
+                        <v-list-item style=" margin-left: 2em">
+                        <v-list-item-title style="color: black !important; font-weight: 400; font-size: 18px !important" ><v-icon color="#F8744E">mdi-store </v-icon> Sucursal a cargo: <strong style="font-size: 16px; font-weight: 400"> N°2 </strong></v-list-item-title>
                         </v-list-item>
-                        <v-list-item>
-                        <v-list-item-title style="color: black !important;  font-weight: 400; font-size: 20px !important"><v-icon color="#F8744E">mdi-pin </v-icon> Dirección de la sucursal:<strong style="font-size: 16px; font-weight: 400"> Boulevard San Juan 798 </strong> </v-list-item-title>
+                        <v-list-item style=" margin-left: 2em">
+                        <v-list-item-title style="color: black !important;  font-weight: 400; font-size: 18px !important"><v-icon color="#F8744E">mdi-pin </v-icon> Dirección de la sucursal:<strong style="font-size: 16px; font-weight: 400"> Boulevard San Juan 798 </strong> </v-list-item-title>
                         </v-list-item>
-                        <v-list-item>
-                        <v-list-item-title style="color: black !important;  font-weight: 400; font-size: 20px !important"><v-icon color="#F8744E">mdi-phone </v-icon> Teléfono:  <strong style="font-size: 16px; font-weight: 400">  0351-4578983 </strong> </v-list-item-title> 
+                        <v-list-item style=" margin-left: 2em">
+                        <v-list-item-title style="color: black !important;  font-weight: 400; font-size: 18px !important"><v-icon color="#F8744E">mdi-phone </v-icon> Teléfono:  <strong style="font-size: 16px; font-weight: 400">  0351-4578983 </strong> </v-list-item-title> 
                       </v-list-item>
                       </v-list>
-                   
+                     
                   </v-card>
                 </v-dialog>
 

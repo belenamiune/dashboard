@@ -1,11 +1,13 @@
 <template>
-  <v-container fluid>
+  <v-container fluid >
     <navbar />
   <v-data-table
     :headers="headers"
     :items="reservas"
     sort-by="calories"
-    class="elevation-1"
+    class="elevation-1 mt-8"
+    style="margin-right: 3em !important; margin-left: 3em !important"
+   
   >
     <template v-slot:top>
      <v-card-title>

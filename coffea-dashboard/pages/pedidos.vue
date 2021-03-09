@@ -1,7 +1,7 @@
 <template>
 <v-container fluid>
   <navbar />
- <v-card class="mt-5">
+ <v-card class="mt-5" style="margin-right: 3em !important; margin-left: 3em !important">
     <v-card-title>
      Pedidos
       <v-menu
@@ -22,7 +22,7 @@
             rounded
             small
             style="max-width: 130px !important; margin-left: 3em !important; background-color: #F8744E !important; color: white !important "
-          > <v-icon small> mdi-calendar  </v-icon> 09 ABRIL 2021</v-btn>
+          >  <v-icon small> mdi-calendar  </v-icon> <p style="margin-top: 1.5em; margin-left: 0.5em"> 09 ABRIL 2021 </p> </v-btn>
         </template>
         <v-date-picker
           v-model="date"
@@ -121,7 +121,7 @@
             pedido: 'Delivery',
             pago: 'Puntos',
             previo: 'Listo',
-            estados:  ['Entregado', 'Listo', 'Preparación', 'Pendiente'],
+            estados:  ['Pendiente', 'Preparación', 'Listo', 'Entregado'],
             rastreo: 'Q9U6FRK2KG',
           },
            {
@@ -132,7 +132,7 @@
             pedido: 'Delivery',
             pago: 'Dinero',
             previo: 'Preparación',
-            estados:  ['Entregado', 'Listo', 'Preparación', 'Pendiente'],
+            estados:   ['Pendiente', 'Preparación', 'Listo', 'Entregado'],
             rastreo: 'XCVBNMLOPS'
           },
 
@@ -144,7 +144,7 @@
             pedido: 'Retiro en el local',
             pago: 'Puntos',
             previo: 'Entregado',
-            estados:  ['Entregado', 'Listo', 'Preparación', 'Pendiente'],
+            estados:  ['Pendiente', 'Preparación', 'Listo', 'Entregado'],
             rastreo: 'SDKLJBZTCM'
           },
 
@@ -156,7 +156,7 @@
             pedido: 'Delivery',
             pago: 'Puntos y dinero',
             previo: 'Pendiente',
-            estados:  ['Entregado', 'Listo', 'Preparación', 'Pendiente'],
+            estados:  ['Pendiente', 'Preparación', 'Listo', 'Entregado'],
             rastreo: 'QV7DS58X4S'
           },
 
@@ -168,7 +168,7 @@
             pedido: 'Retiro en el local',
             pago: 'Dinero',
             previo: 'Preparación',
-            estados:  ['Entregado', 'Listo', 'Preparación', 'Pendiente'],
+            estados:  ['Pendiente', 'Preparación', 'Listo', 'Entregado'],
             rastreo: '5J42ZUURDS'
           },
         

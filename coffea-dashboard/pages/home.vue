@@ -3,7 +3,7 @@
   <navbar />
   <v-row  style="margin-right: 6em; margin-left: 6em; margin-top: 1em">
     <v-col cols="9">
-    <h3 style="color: #F8744E">Dashboard </h3>
+    <h2 style="color: #F8744E; font-weight: 300">Dashboard </h2>
     
     </v-col>
     <v-col cols="3">
@@ -25,7 +25,7 @@
             rounded
             small
             style="max-width: 130px !important; margin-left: 3em !important; background-color: #F8744E !important; color: white !important "
-          > <v-icon small> mdi-calendar  </v-icon> 09 ABRIL 2021</v-btn>
+          > <v-icon small> mdi-calendar  </v-icon> <p style="margin-top: 1.5em; margin-left: 0.5em"> 09 ABRIL 2021 </p> </v-btn>
         </template>
         <v-date-picker
           v-model="date"
@@ -76,8 +76,8 @@
   </v-row>
 
   <v-row style="margin-right: 6em; margin-left: 6em;">
-    <v-col cols="5">
-        <v-card class="mt-5">
+    <v-col cols="5" >
+        <v-card class="mt-5" style="height: 410px">
             <v-card-title>
               Promociones actuales
               <v-spacer></v-spacer>
@@ -91,7 +91,7 @@
     </v-col>
 
      <v-col cols="7">
-       <v-card class="mt-5">
+       <v-card class="mt-5" style="height: 410px ">
             <v-card-title>
               Cantidad de ventas diarias
               <v-spacer></v-spacer>
