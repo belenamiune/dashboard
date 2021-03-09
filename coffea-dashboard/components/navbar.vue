@@ -145,8 +145,8 @@
                 </v-menu>
 
                 <v-dialog v-model="dialog" width="500"  transition="dialog-bottom-transition"  persistent>
-                    <v-card >
-                        <v-card-title class="font-weight-regular justify-center align-center text-center pt-0 mt-3  " >
+                    <v-card style="border-radius: 15px !important">
+                        <v-card-title class="font-weight-regular justify-center align-center text-center" style="margin-top: 1em !important" >
                            ¿Estás seguro de cerrar sesión?
                         </v-card-title>
                                 
@@ -164,10 +164,10 @@
                 </v-dialog>
 
                   <v-dialog v-model="dialog3" width="550"  transition="dialog-bottom-transition"  persistent>
-                   <v-card class="mx-auto" width="600" >
+                   <v-card class="mx-auto" width="600" style="border-radius: 15px !important" >
                   
                       <v-list>
-                        <v-list-item >
+                        <v-list-item style=" margin-top:1em !important">
                           <v-list-item-avatar style=" margin-left: 2em">
                             <v-img src="https://randomuser.me/api/portraits/women/28.jpg"></v-img>
                           </v-list-item-avatar>
@@ -204,7 +204,7 @@
                         <v-list-item style=" margin-left: 2em">
                         <v-list-item-title style="color: black !important;  font-weight: 400; font-size: 18px !important"><v-icon color="#F8744E">mdi-pin </v-icon> Dirección de la sucursal:<strong style="font-size: 16px; font-weight: 400"> Boulevard San Juan 798 </strong> </v-list-item-title>
                         </v-list-item>
-                        <v-list-item style=" margin-left: 2em">
+                        <v-list-item style=" margin-left: 2em; margin-bottom: 1em !important">
                         <v-list-item-title style="color: black !important;  font-weight: 400; font-size: 18px !important"><v-icon color="#F8744E">mdi-phone </v-icon> Teléfono:  <strong style="font-size: 16px; font-weight: 400">  0351-4578983 </strong> </v-list-item-title> 
                       </v-list-item>
                       </v-list>

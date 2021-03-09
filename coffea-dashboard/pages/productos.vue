@@ -83,7 +83,7 @@
    </v-data-table>
    <v-spacer></v-spacer>
  </v-card>
- <v-card class="mt-5">
+ <v-card class="mt-5" style="margin-right: 1em !important; margin-left: 1em !important">
    <v-card-title>
       Tortas
       <v-spacer></v-spacer>
@@ -101,7 +101,7 @@
     </v-data-table>
   </v-card>
 
- <v-card class="mt-5">
+ <v-card class="mt-5" style="margin-right: 1em !important; margin-left: 1em !important">
    <v-card-title>
      Sándwiches
       <v-spacer></v-spacer>
@@ -120,7 +120,7 @@
   </v-card>
 
   
- <v-card class="mt-5">
+ <v-card class="mt-5" style="margin-right: 1em !important; margin-left: 1em !important">
    <v-card-title>
      Promociones
       <v-spacer></v-spacer>

@@ -4,6 +4,7 @@
   <v-data-table
     :headers="headers"
     :items="reservas"
+     :search="search"
     sort-by="calories"
     class="elevation-1 mt-8"
     style="margin-right: 3em !important; margin-left: 3em !important"
@@ -30,7 +31,7 @@
             rounded
             small
             style="max-width: 130px !important; margin-left: 3em !important; background-color: #F8744E !important; color: white !important "
-          > <v-icon small> mdi-calendar  </v-icon> Abril 2021</v-btn>
+          > <v-icon small> mdi-calendar  </v-icon> <p style="margin-top: 1.5em; margin-left: 0.5em">  Abril 2021 </p></v-btn>
         </template>
         <v-date-picker
           v-model="date"
@@ -95,7 +96,7 @@
               </v-col>
             </v-row>
           </template>
-          <v-card>
+          <v-card style="border-radius: 15px !important">
             <v-card-title>
               <span class="headline">{{ formTitle }}</span>
             </v-card-title>
@@ -178,7 +179,7 @@
               </v-btn>
                   </template>
 
-                   <v-card>
+                   <v-card style="border-radius: 15px !important">
                     <v-card-title  style="justify-content: center !important">La reserva ha sido creada</v-card-title>
                     <v-row>
                       <v-col cols="5">
@@ -195,8 +196,8 @@
           </v-card>
         </v-dialog>
         <v-dialog v-model="dialogDelete" max-width="500px">
-          <v-card>
-            <v-card-title class="headline">¿Estás seguro de rechazar esta reserva?</v-card-title>
+          <v-card style="border-radius: 15px !important">
+            <v-card-title  style="justify-content: center">¿Estás seguro de rechazar esta reserva?</v-card-title>
             <v-card-actions>
               <v-spacer></v-spacer>
               <v-btn color="black" rounded small text @click="closeDelete" class="custom-transform-class text-none" style="background-color: #E5E5E5">Cancelar</v-btn>
@@ -224,8 +225,8 @@
         </v-dialog>
     
     <v-dialog v-model="dialogConfirm" max-width="500px">
-          <v-card>
-            <v-card-title class="headline">¿Estás seguro de confirmar esta reserva?</v-card-title>
+          <v-card style="border-radius: 15px !important">
+            <v-card-title style="justify-content: center">¿Estás seguro de confirmar esta reserva?</v-card-title>
             <v-card-actions>
               <v-spacer></v-spacer>
               <v-btn color="black" rounded small text @click="closeConfirm"  class="custom-transform-class text-none" style="background-color: #E5E5E5">Cancelar</v-btn>
@@ -289,6 +290,7 @@
 <script>
   export default {
     data: () => ({
+      search: '',
       menu: false,
       modal: false,
       dialog: false,
