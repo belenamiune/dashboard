@@ -155,7 +155,7 @@
                               Cancelar
                           </v-btn>
                         <v-btn class="font-weight-semibold red pa-4 custom-transform-class text-none text--white"  elevation="6" 
-                          rounded @click="dialog=false" style="color: white; background-color: red !important" to="/"> 
+                          rounded @click="dialog=false" style="color: white; background-color: red !important" to="/login"> 
                            Cerrar sesión
                         </v-btn>
 

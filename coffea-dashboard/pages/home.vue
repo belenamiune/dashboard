@@ -24,8 +24,9 @@
             v-on="on"
             rounded
             small
-            style="max-width: 130px !important; margin-left: 3em !important; background-color: #F8744E !important; color: white !important "
-          > <v-icon small> mdi-calendar  </v-icon> <p style="margin-top: 1.5em; margin-left: 0.5em"> 09 ABRIL 2021 </p> </v-btn>
+            style="max-width: 140px !important; background-color: #F8744E !important; color: white !important "
+          > <v-icon small style=" margin-top: 0.3em"> mdi-calendar  </v-icon> 
+          <p style="margin-top: 1.5em; margin-left: 0.5em; "> 09 ABRIL 2021 </p> </v-btn>
         </template>
         <v-date-picker
           v-model="date"
@@ -56,21 +57,21 @@
       <v-card style=" height: 180px !important;">
            <v-card-title><v-icon color="primary">mdi-account </v-icon> Usuarios </v-card-title>
            <v-card-subtitle>Total de usuarios registrados en la aplicación</v-card-subtitle>
-             <v-card-text style="text-align: center; color: #F8744E; font-weight: bolder; font-size: 60px; margin-top: 30px; margin-bottom: 20px"> 960 </v-card-text>
+             <v-card-text style="text-align: center; color: #F8744E; font-weight:600; font-size: 60px; margin-top: 30px; margin-bottom: 20px"> 960 </v-card-text>
       </v-card>
     </v-col>
     <v-col cols="4" style="background: #FFFFFF; border-radius: 15px; width: 549px; height: 150px;">
      <v-card style=" height: 180px !important;">
            <v-card-title><v-icon color="primary">mdi-cart-outline </v-icon> Pedidos </v-card-title>
            <v-card-subtitle>Total de pedidos concretados</v-card-subtitle>
-             <v-card-text style="text-align: center; color: #F8744E; font-weight: bolder; font-size: 60px; margin-top: 30px; margin-bottom: 20px"> <strong style="color:  #184042"> 25</strong>/30 </v-card-text>
+             <v-card-text style="text-align: center; color: #F8744E; font-weight: 600; font-size: 60px; margin-top: 30px; margin-bottom: 20px"> <strong style="color:#184042; font-weight: 600"> 25</strong>/30 </v-card-text>
       </v-card>
     </v-col>
     <v-col cols="4" style="background: #FFFFFF; border-radius: 15px; width: 549px; height: 150px;">
      <v-card style=" height: 180px !important;">
            <v-card-title><v-icon color="primary">mdi-calendar </v-icon> Reservas </v-card-title>
            <v-card-subtitle>Total de reservas actuales</v-card-subtitle>
-             <v-card-text style="text-align: center; color: #F8744E; font-weight: bolder; font-size: 60px; margin-top: 30px; margin-bottom: 20px"> 17 </v-card-text>
+             <v-card-text style="text-align: center; color: #F8744E; font-weight: 600; font-size: 60px; margin-top: 30px; margin-bottom: 20px"> 17 </v-card-text>
       </v-card>
     </v-col>
   </v-row>
@@ -175,3 +176,9 @@ export default {
   }
 
 </script>
+
+<style scoped>
+ * {
+    font-family: 'rawline', sans-serif !important; 
+ }
+</style>

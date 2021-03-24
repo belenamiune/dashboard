@@ -236,3 +236,9 @@ border-radius: 15px;">
     },
   }
 </script>
+
+<style scoped>
+ * {
+    font-family: 'rawline', sans-serif !important; 
+ }
+</style>
